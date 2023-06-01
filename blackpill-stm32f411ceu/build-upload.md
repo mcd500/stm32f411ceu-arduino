@@ -8,11 +8,11 @@ Follow the images for applying the setting for the Black Pill STM32F411CEU6.
 
 ### Selecting Board part number.
 
-<img src="blackpill-stm32f411ceu-board-selection-1.png" alt="Board part number" width="1000" height="1000"/>
+<img src="blackpill-stm32f411ceu-board-selection-2.png" alt="Board part number" width="1000" height="1000"/>
 
 ### Selecting Upload method.
 
-<img src="blackpill-stm32f411ceu-board-selection-1.png" alt="Upload method" width="1000" height="1000"/>
+<img src="blackpill-stm32f411ceu-board-selection-3.png" alt="Upload method" width="1000" height="1000"/>
 
 
 ## (2) Connecting through ST-Link V2 clone
