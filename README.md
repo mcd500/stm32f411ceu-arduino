@@ -6,7 +6,7 @@ Here uses STM32duino project from official ST.com at [the link to the github](ht
 
 1. Install Arduino for STM32
 
-   [Procedure of installing Arduino for STM32.](arduino-stm32-common.md)
+   [Procedure of installing Arduino for STM32](arduino-stm32-common.md)
 
 2. Prepare ST-Link V2 for Arduino
 

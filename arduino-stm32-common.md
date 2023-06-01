@@ -6,9 +6,9 @@ $ mkdir bin
 $ cd bin
 ```
 
-Download "Linux AppImage 64 bits (X86-64)" to '~/bin'.
+Download "Linux AppImage 64 bits (X86-64)" to `~/bin`.
 
-https://www.arduino.cc/en/software
+[Arduino site: https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
 
 <img src="arduinoide2-download.png" alt="Arduino download site" width="1000" height="500"/>
 
@@ -27,9 +27,9 @@ $ mkdir tmp
 $ cd tmp
 ```
 
-Download "STM32CubeProgrammer software for Linux" to '~/tmp'.
+Download "STM32CubeProgrammer software for Linux" to `~/tmp`.
 
-https://www.st.com/en/development-tools/stm32cubeprog.html
+[ST.com site: https://www.st.com/en/development-tools/stm32cubeprog.html](https://www.st.com/en/development-tools/stm32cubeprog.html)
 
 <img src="stm32cubeprogrammer-download.png" alt="STM32CubeProgrammer download site" width="1000" height="500"/>
 
