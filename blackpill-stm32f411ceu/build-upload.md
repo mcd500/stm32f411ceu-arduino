@@ -27,7 +27,7 @@ You must connect the microB connector to the PC for supplying the power to the N
 <img src="IMG_7513.jpg" alt="target side" width="1000" height="1000"/>
 
 
-<img src="IMG_7512.jpg" alt="stlink side" width="1000" height="1000"/>
+<img src="IMG_7512-r-1.jpg" alt="stlink side" width="1000" height="1000"/>
 
 
 ## (3) Build the source and upload the binary to the target
@@ -58,8 +58,8 @@ void loop() {
 
 
 <img src="stlinkv2clone-blackpillstm32f411ceu.png" alt="Upload" width="1000" height="1000"/>
-
+<br/>
 
 ## (4) Video of LED blinking
 
-[![Video of LED blinking](led-blinking.png)](IMG_7514.MOV)
+[![Video of LED blinking](led-blinking-1.png)](IMG_7514.mp4)
