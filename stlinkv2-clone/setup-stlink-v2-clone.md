@@ -4,15 +4,14 @@
 
 ![pinout](pinout-stlinkv2-genuine.png)
 ![ST-Link V2 case](stlinkv2-genuine.png)
-
 <br/>
+
 ## ST-Link V2 Clone
 
 ![clone](IMG_7509.jpg)
-
-
 <br/>
-## Setup 
+
+## Setup
 
 1. Setting up udev for stlinkv2 clone to be able to have write permission under /dev.
 
