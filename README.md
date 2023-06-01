@@ -17,4 +17,4 @@ Here uses STM32duino project from official ST.com at [The link to the github](ht
 
 * [Nucleo STM32F411RE](nucleo-stm32f411re/build-upload.md)
 
-* [Black Pill-STM32f411CEU](blackpill-stm32f411ceu/build-upload.md)
+* [Black Pill STM32f411CEU](blackpill-stm32f411ceu/build-upload.md)

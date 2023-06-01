@@ -24,10 +24,10 @@ You must connect the microB connector to the PC for supplying the power to the N
 <img src="IMG_7511.jpg" alt="Entire picture" width="1000" height="1000"/>
 
 
-<img src="IMG_7512.jpg" alt="target side" width="1000" height="1000"/>
+<img src="IMG_7513.jpg" alt="target side" width="1000" height="1000"/>
 
 
-<img src="IMG_7513.jpg" alt="stlink side" width="1000" height="1000"/>
+<img src="IMG_7512.jpg" alt="stlink side" width="1000" height="1000"/>
 
 
 ## (3) Build the source and upload the binary to the target
