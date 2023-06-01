@@ -60,3 +60,6 @@ void loop() {
 <img src="stlinkv2clone-blackpillstm32f411ceu.png" alt="Upload" width="1000" height="1000"/>
 
 
+## (4) Video of LED blinking
+
+[![Video of LED blinking](led-blinking.png)](IMG_7514.MOV)
