@@ -19,8 +19,6 @@ Follow the images for applying the setting for the Black Pill STM32F411CEU6.
 
 Connect 3.3V, GND, SWCLK, SWDIO according the images.
 
-You must connect the microB connector to the PC for supplying the power to the Nucleo.
-
 <img src="IMG_7511.jpg" alt="Entire picture" width="1000" height="1000"/>
 
 
