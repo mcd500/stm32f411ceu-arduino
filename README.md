@@ -1,6 +1,6 @@
 # Instruction of setting up Arduino on STM32
 
-Here uses STM32duino project from official ST.com at [The link to the github](https://github.com/stm32duino/Arduino_Core_STM32)
+Here uses STM32duino project from official ST.com at [the link to the github](https://github.com/stm32duino/Arduino_Core_STM32)
 
 ## Preparation
 
@@ -10,7 +10,7 @@ Here uses STM32duino project from official ST.com at [The link to the github](ht
 
 2. Prepare ST-Link V2 for Arduino
 
-   [Setting up ST-Link V2](stlinkv2-clone/setup-stlink-v2-clone.md)
+   [Setting up ST-Link V2 to be auto detected](stlinkv2-clone/setup-stlink-v2-clone.md)
 
 
 ## Try uploading a sample program

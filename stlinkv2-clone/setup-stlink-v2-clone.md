@@ -1,11 +1,27 @@
-(1) Setup ST-Link V2 clone
+# Preparation of ST-Link V2
 
-Setting up udev for stlinkv2 clone to be able to have write permission under /dev.
+## ST-Link V2 Genuine
+
+![pinout](pinout-stlinkv2-genuine.png)
+![ST-Link V2 case](stlinkv2-genuine.png)
+
+<br/>
+## ST-Link V2 Clone
+
+![clone](IMG_7509.jpg)
+
+
+<br/>
+## Setup 
+
+1. Setting up udev for stlinkv2 clone to be able to have write permission under /dev.
 
 ```
 $ git clone https://github.com/stlink-org/stlink
 $ sudo cp stlink/config/udev/rules.d/49-stlinkv* /etc/udev/rules.d/
 ```
+
+2. Connect ST-Link V2
 
 The udev rule will grant write access to the following usb device for the ST-Link V2.
 ```
