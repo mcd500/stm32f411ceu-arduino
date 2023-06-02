@@ -42,12 +42,12 @@ If the text box is not empty, you can separate the URLs with a comma.
 1. Go to `Tools > Board > Boards Manager`.
 
 ![Board Manager](select-stm32-boardmanager.png)
-<pre/>
+<br/>
 
 2. Search for STM32, select latest version and click Install.
 
 ![Board Manager](install-stm32.png)
-<pre/>
+<br/>
 
 ## (2) Install STM32CubeProgrammer
 
