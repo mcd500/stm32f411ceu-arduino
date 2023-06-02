@@ -1,4 +1,4 @@
-(1) Install Arduino IDE 2
+## (1) Install Arduino IDE 2
 
 ```
 $ cd ~
@@ -19,7 +19,37 @@ $ cd ~/bin
 $ ./arduino-ide_2.1.0_Linux_64bit.AppImage
 ```
 
-(2) Install STM32CubeProgrammer
+## Add STM32duino to Arduino
+
+The STM32duino is an official project by ST.com for supporting Arduino on STM32.
+
+### Add STM32 BoardManagerFiles
+
+Go to `File > Preferences`.
+
+Add the URL below to Additional Board Manager URLs text box:
+
+```
+https://github.com/stm32duino/BoardManagerFiles/raw/master/STM32/package_stm_index.json
+```
+
+If the text box is not empty, you can separate the URLs with a comma.
+
+![Additional Board Manager for STM32](add-stm32duino-arduino.png)
+
+### Install STM32 support to Arduino
+
+1. Go to `Tools > Board > Boards Manager`.
+
+![Board Manager](select-stm32-boardmanager.png)
+<pre/>
+
+2. Search for STM32, select latest version and click Install.
+
+![Board Manager](install-stm32.png)
+<pre/>
+
+## (2) Install STM32CubeProgrammer
 
 ```
 $ cd ~

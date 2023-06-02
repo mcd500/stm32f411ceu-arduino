@@ -54,10 +54,19 @@ void loop() {
 }
 ```
 
+## (4) Upload
+
+Sometimes it requires pressing BOOT0 and RESET button before uploading the binary.
+
+1. Press both reset and BOOT0
+2. Hold boot0, release RESET
+3. Release BOOT0 2 sec later
+
+This is the screenshot when the upload is successful.
 
 <img src="stlinkv2clone-blackpillstm32f411ceu.png" alt="Upload" width="1000" height="1000"/>
 <br/>
 
-## (4) Video of LED blinking
+## (5) Video of LED blinking
 
 [![Video of LED blinking](led-blinking-1.png)](IMG_7514.mp4)
