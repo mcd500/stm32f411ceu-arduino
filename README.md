@@ -18,3 +18,8 @@ Here uses STM32duino project from official ST.com at [the link to the github](ht
 * [Nucleo STM32F411RE](nucleo-stm32f411re/build-upload.md)
 
 * [Black Pill STM32f411CEU](blackpill-stm32f411ceu/build-upload.md)
+
+
+## Pinouts of Black Pill STM32F411
+
+<img src="Black_pill_stm32f4-pinout.png" alt="Pinouts of Black Pill STM32F411" width="1000"/>
