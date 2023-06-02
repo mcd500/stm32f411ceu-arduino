@@ -10,7 +10,7 @@ Download "Linux AppImage 64 bits (X86-64)" to `~/bin`.
 
 [Arduino site: https://www.arduino.cc/en/software](https://www.arduino.cc/en/software)
 
-<img src="arduinoide2-download.png" alt="Arduino download site" width="1000" height="500"/>
+<img src="arduinoide2-download.png" alt="Arduino download site" width="1000"/>
 
 
 Try booting Arduino IDE 2
@@ -35,18 +35,18 @@ https://github.com/stm32duino/BoardManagerFiles/raw/master/STM32/package_stm_ind
 
 If the text box is not empty, you can separate the URLs with a comma.
 
-![Additional Board Manager for STM32](add-stm32duino-arduino.png)
+<img src="add-stm32duino-arduino.png" alt="Adding Board Manager for STM32" width="1000"/>
 
 ### Install STM32 support to Arduino
 
 1. Go to `Tools > Board > Boards Manager`.
 
-![Board Manager](select-stm32-boardmanager.png)
+<img src="select-stm32-boardmanager.png" alt="Slecting Board Manager for STM32" width="1000"/>
 <br/>
 
 2. Search for `STM32`, select latest version and click Install.
 
-![Board Manager](install-stm32.png)
+<img src="install-stm32.png" alt="Install STM32 boards" width="1000"/>
 <br/>
 
 ## (2) Install STM32CubeProgrammer
@@ -61,7 +61,7 @@ Download "STM32CubeProgrammer software for Linux" to `~/tmp`.
 
 [ST.com site: https://www.st.com/en/development-tools/stm32cubeprog.html](https://www.st.com/en/development-tools/stm32cubeprog.html)
 
-<img src="stm32cubeprogrammer-download.png" alt="STM32CubeProgrammer download site" width="1000" height="500"/>
+<img src="stm32cubeprogrammer-download.png" alt="STM32CubeProgrammer download site" width="1000"/>
 
 Unzip downloaded zip file.
 ```
