@@ -9,9 +9,9 @@ uint8_t data_list[DATA_SIZE];
 #define STEP_GPIO_NUM       PA9
 #define DIR_GPIO_NUM        PA10
 
-#define EN_GPIO_NUM2        PB3
-#define STEP_GPIO_NUM2      PB4
-#define DIR_GPIO_NUM2       PB5
+#define EN_GPIO_NUM2        PA5
+#define STEP_GPIO_NUM2      PA6
+#define DIR_GPIO_NUM2       PA7
 
 #define SW_GPIO_NUM         PA0  // KEY button on Black Pill
 
