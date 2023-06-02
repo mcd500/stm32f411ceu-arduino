@@ -30,7 +30,7 @@ Go to `File > Preferences`.
 Add the URL below to Additional Board Manager URLs text box:
 
 ```
-https://github.com/stm32duino/BoardManagerFiles/raw/master/STM32/package_stm_index.json
+https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectronics_index.json
 ```
 
 If the text box is not empty, you can separate the URLs with a comma.
