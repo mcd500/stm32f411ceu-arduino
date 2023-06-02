@@ -44,7 +44,7 @@ If the text box is not empty, you can separate the URLs with a comma.
 ![Board Manager](select-stm32-boardmanager.png)
 <br/>
 
-2. Search for STM32, select latest version and click Install.
+2. Search for `STM32`, select latest version and click Install.
 
 ![Board Manager](install-stm32.png)
 <br/>
