@@ -15,7 +15,7 @@ uint8_t data_list[DATA_SIZE];
 
 #define SW_GPIO_NUM         PA0  // KEY button on Black Pill
 
-#define LED_GPIO_NUM        PC13
+#define LED_GPIO_NUM        PC13 // LED on Black Pill
 #define LED2_GPIO_NUM       PC14
 
 #define HALL_IC_GPIO_NUM    PB8

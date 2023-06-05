@@ -23,3 +23,9 @@ Here uses STM32duino project from official ST.com at [the link to the github](ht
 ## Pinouts of Black Pill STM32F411
 
 <img src="Black_pill_stm32f4-pinout.png" alt="Pinouts of Black Pill STM32F411" width="1000"/>
+<br/>
+
+
+## Build and running Zero Gravity Test program
+
+* [Black Pill STM32f411CEU](mujyuryoku-control-stm32f411/stm32-build-upload-run.md)
