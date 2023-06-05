@@ -101,41 +101,52 @@ int sw_status = 0;
 int hall_ic_status = 0;
 int flgHall = 0;
 
+// printf function to support Serial or printf
+void local_printf(char *fmt, ...)
+{
+  va_list argptr;
+  va_start(argptr, fmt);
+#ifdef STM32F411xE
+  SerialUSB.printf(fmt, argptr);
+#else
+  printf(fmt, argptr);
+#endif
+  va_end(argptr);
+}
 
 void printPara() {
-  printf("t0 (加速する時間):%lfs\n", t0);
-  printf("t10 (加速終了から頂点までの時間):%lfs\n", t10);
-  printf("t11 (頂点から減速開始までの時間):%lfs\n", t11);
-  printf("Zero G Time （= t10 + 111）:%lfs\n", t_gap0 + t_gap1 + t10 + t11);
-  printf("合計時間(= t0 + t10 + t11 + t2):%lfs\n", t_end);
-  printf("加速度 初期値:%lfG (1.0+%lf)G\n", n00, n00 - 1.0f);
-  printf("加速度 加速終了時の値:%lfG (1.0+%lf)G\n", n00 + n01 * t0, n00 + n01 * t0 - 1.0f);
-  printf("加速の高さ:%lfm\n", (n00 - 1.0)*g / 2.0 * t0 * t0 + n01 * g / 6.0 * t0 * t0 * t0);
+  local_printf("t0 (加速する時間):%lfs\n", t0);
+  local_printf("t10 (加速終了から頂点までの時間):%lfs\n", t10);
+  local_printf("t11 (頂点から減速開始までの時間):%lfs\n", t11);
+  local_printf("Zero G Time （= t10 + 111）:%lfs\n", t_gap0 + t_gap1 + t10 + t11);
+  local_printf("合計時間(= t0 + t10 + t11 + t2):%lfs\n", t_end);
+  local_printf("加速度 初期値:%lfG (1.0+%lf)G\n", n00, n00 - 1.0f);
+  local_printf("加速度 加速終了時の値:%lfG (1.0+%lf)G\n", n00 + n01 * t0, n00 + n01 * t0 - 1.0f);
+  local_printf("加速の高さ:%lfm\n", (n00 - 1.0)*g / 2.0 * t0 * t0 + n01 * g / 6.0 * t0 * t0 * t0);
   if (t_gap1 < 0.001f) {
-    printf("加速終了から頂点の高さ:%lfm\n", t10 * t10 * g / 2.0);
-    printf("最初から頂点の高さ:%lfm\n", (n00 - 1.0)*g / 2.0 * t0 * t0 + n01 * g / 6.0 * t0 * t0 * t0 + t10 * t10 * g / 2.0);
+    local_printf("加速終了から頂点の高さ:%lfm\n", t10 * t10 * g / 2.0);
+    local_printf("最初から頂点の高さ:%lfm\n", (n00 - 1.0)*g / 2.0 * t0 * t0 + n01 * g / 6.0 * t0 * t0 * t0 + t10 * t10 * g / 2.0);
   } else {
-    printf("加速終了からギャップ開始までの時間:%f秒\n", t_gap0);
-    printf("ギャップ時間（一定速度が続く時間）:%f秒\n", t_gap1);
-    printf("加速終了から頂点の高さ:%fm\n", h_peak_gap - ((n00 - 1.0f)*g / 2.0f * t0 * t0 + n01 * g / 6.0f * t0 * t0 * t0));
-    printf("最初から頂点の高さ:%0.03fm\n", h_peak_gap);
+    local_printf("加速終了からギャップ開始までの時間:%f秒\n", t_gap0);
+    local_printf("ギャップ時間（一定速度が続く時間）:%f秒\n", t_gap1);
+    local_printf("加速終了から頂点の高さ:%fm\n", h_peak_gap - ((n00 - 1.0f)*g / 2.0f * t0 * t0 + n01 * g / 6.0f * t0 * t0 * t0));
+    local_printf("最初から頂点の高さ:%0.03fm\n", h_peak_gap);
   }
 
-  printf("減速時の加速度:%lfG (1.0+%lf)G\n", n1, n1 - 1.0f);
-  printf("頂点から減速開始までの高さ:%lfm\n", t11 * t11 * g / 2.0);
-  printf("減速開始から減速終了までの高さ:%lfm\n", (n1 - 1.0f)*t2 * t2 * g / 2.0);
-  //  printf("内部加速:%lfG\n", nxx / 9.80665f);
-  printf("内部加速の高さ:%lfm\n", offset0);
+  local_printf("減速時の加速度:%lfG (1.0+%lf)G\n", n1, n1 - 1.0f);
+  local_printf("頂点から減速開始までの高さ:%lfm\n", t11 * t11 * g / 2.0);
+  local_printf("減速開始から減速終了までの高さ:%lfm\n", (n1 - 1.0f)*t2 * t2 * g / 2.0);
+  //  local_printf("内部加速:%lfG\n", nxx / 9.80665f);
+  local_printf("内部加速の高さ:%lfm\n", offset0);
 }
 
 
 void setup() {
-//  Serial.begin(9600);
-//  printf("Hello World\n");
-
-  delay(3000);
-//  SerialUSB.begin(115200);
-//  SerialUSB.println("Akira!!");
+  SerialUSB.begin(9600);
+  while (!SerialUSB) {
+    delay(100);  // wait for USB serial to be ready
+  }
+  SerialUSB.println("\n無重力制御スタート!! with STM32F411CEU\n");
 
   pinMode(EN_GPIO_NUM, OUTPUT);
   pinMode(STEP_GPIO_NUM, OUTPUT);
@@ -174,7 +185,7 @@ void setup() {
     t_end = t0 + t_gap0 + t_gap1 + t10 + t11 + t2;
   } else {
     if (t_gap0 >= t10) {
-      printf("\n\n\nError t_gap0 >= t10\n\n");
+      local_printf("\n\n\nError t_gap0 >= t10\n\n");
     }
     t_gap0 = 0.0f;
   }
@@ -263,10 +274,10 @@ void setup() {
     t += tk;
   }
   i_end = i;
-  printf("i_end:%d\n", i_end);
-  printf("endt:%fs\n", ((float)i_end * tk));
-  printf("i_peek:%d\n", i_peek);
-  printf("peekt:%fs\n", ((float)i_peek * tk));
+  local_printf("i_end:%d\n", i_end);
+  local_printf("endt:%fs\n", ((float)i_end * tk));
+  local_printf("i_peek:%d\n", i_peek);
+  local_printf("peekt:%fs\n", ((float)i_peek * tk));
   digitalWrite(LED_GPIO_NUM, LOW); // LED ON
 
   digitalWrite(HALL_PW_GPIO_NUM, HIGH); // HALL IC PWR
@@ -294,7 +305,6 @@ void setup() {
 
 
 void loop() {
-  return;
   uint64_t tim_count_new = ((micros() / slow_speed) >> SHIFT_STEP); // 16μ/8μ/4μ秒毎
   if (tim_count_old != tim_count_new) {
     if (tim_count_old & 0x20000) {
@@ -336,7 +346,7 @@ void loop() {
       sw_status = 1;
     }
     if (tim_count_new % (1000000 / STEP_MICRO_SEC / slow_speed) == 0) {
-      printf("%d Zero G Time:%lfs h_peak:%fm h_peak_gap:%fm t_gap0:%fs t_gap1:%fs\n", (int)tim_count_new / (1000000 / STEP_MICRO_SEC / slow_speed), t_gap0 + t_gap1 + t10 + t11, h_peak, h_peak_gap, t_gap0, t_gap1);
+      local_printf("%d Zero G Time:%lfs h_peak:%fm h_peak_gap:%fm t_gap0:%fs t_gap1:%fs\n", (int)tim_count_new / (1000000 / STEP_MICRO_SEC / slow_speed), t_gap0 + t_gap1 + t10 + t11, h_peak, h_peak_gap, t_gap0, t_gap1);
     }
   }
   tim_count_old = tim_count_new;
