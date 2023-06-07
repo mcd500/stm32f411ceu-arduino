@@ -106,17 +106,13 @@ The definitions of generic ARM Cortex-M4.
 ```
 
 
-### Source code of Zero Gravity Test program
+### Entire Source code of Zero Gravity Test program
 
 [Original ESP32](ESP32_ZeroG_ControlPrg.ino)
 
 [Ported source code on Black Pill STM32F411](mujyuryoku-control-stm32f411.ino)
 
 
-### Made other changes to build on STM32F411.
-
-
 ## Build and upload Zero Gravity Test program
 
 [![build_upload](stm32-build-upload.png)](stm32-build-upload-ss.mp4)
-
