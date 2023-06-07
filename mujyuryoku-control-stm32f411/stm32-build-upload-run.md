@@ -19,7 +19,7 @@ To enable Serial print through USB-C cable.
 
 Change the Newlib to enable to user type float in the printf() function.
 
-[![printf_float](enable_float_printf.png)](stm32-serial-setting.mp4)
+[![printf_float](enable_float_printf.png)](stm32-serial-setting-ss.mp4)
 <br/>
 
 ## Explanation of porting the Test program to STM32F411
@@ -71,5 +71,5 @@ void local_printf(char *fmt, ...)
 
 ## Build and upload Zero Gravity Test program
 
-[![build_upload](stm32-build-upload.png)](stm32-build-upload.mp4)
+[![build_upload](stm32-build-upload.png)](stm32-build-upload-ss.mp4)
 
