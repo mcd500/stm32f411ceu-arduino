@@ -106,7 +106,7 @@ The definitions of generic ARM Cortex-M4.
 /home/USER/.arduino15/packages/STMicroelectronics/tools/CMSIS/5.7.0/CMSIS/Core/Include/core_cm4.h
 ```
 
-Some useful definitions for Black Pill STM32F4.
+Some useful definitions example to add for Black Pill STM32F4 in your source code.
 
 ```
 // On-board LED pin number
