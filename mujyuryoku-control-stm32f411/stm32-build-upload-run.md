@@ -17,7 +17,8 @@ To enable Serial print through USB-C cable.
 <img src="stm32-serial-print-setting-1.png" alt="SerialUSB2" width="1000"/>
 <br/>
 
-Change the Newlib to enable to user type float in the printf() function.
+Change the Newlib to enable to use type float in the printf() function.
+Without this change, garbled characters will be printed on the serial console right afte the place using `%f`.
 
 [![printf_float](enable_float_printf.png)](stm32-serial-setting-ss.mp4)
 <br/>
@@ -103,6 +104,30 @@ The definitions of generic STM32F4xx.
 The definitions of generic ARM Cortex-M4.
 ```
 /home/USER/.arduino15/packages/STMicroelectronics/tools/CMSIS/5.7.0/CMSIS/Core/Include/core_cm4.h
+```
+
+Some useful definitions for Black Pill STM32F4.
+
+```
+// On-board LED pin number
+#define LED_BUILTIN           PC13
+
+// On-board user button
+#define USER_BTN              PA0
+
+// SPI definitions
+#define PIN_SPI_SS            PA4
+#define PIN_SPI_SS1           PA4
+#define PIN_SPI_SS2           PB12
+#define PIN_SPI_SS3           PA15
+#define PIN_SPI_SS5           PB1
+#define PIN_SPI_MOSI          PA7
+#define PIN_SPI_MISO          PA6
+#define PIN_SPI_SCK           PA5
+
+// I2C definitions
+#define PIN_WIRE_SDA          PB7
+#define PIN_WIRE_SCL          PB6
 ```
 
 

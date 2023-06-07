@@ -32,7 +32,7 @@ Connect 3.3V, GND, SWCLK, SWDIO according the images.
 
 Trying the LED blinking program.
 
-The LED is connected to PC13.
+The LED is connected to PC13 on the Black Pill board.
 
 ```
 #include <Arduino.h>
