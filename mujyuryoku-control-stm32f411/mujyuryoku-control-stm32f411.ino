@@ -101,7 +101,19 @@ int sw_status = 0;
 int hall_ic_status = 0;
 int flgHall = 0;
 
-// printf function to support Serial or printf
+// printf functions to support Serial or printf
+void local_printf_init(int baud_rate)
+{
+#ifdef STM32F411xE
+  SerialUSB.begin(baud_rate);
+  while (!SerialUSB) {
+    delay(100);  // wait for USB serial to be ready
+  }
+#else
+  Serial.begin(baud_rate);
+#endif
+}
+
 void local_printf(char *fmt, ...)
 {
   va_list argptr;
@@ -142,11 +154,8 @@ void printPara() {
 
 
 void setup() {
-  SerialUSB.begin(9600);
-  while (!SerialUSB) {
-    delay(100);  // wait for USB serial to be ready
-  }
-  SerialUSB.println("\n無重力制御スタート!! with STM32F411CEU\n");
+  local_printf_init(9600);
+  local_printf("\n無重力制御スタート!! with STM32F411CEU\n");
 
   pinMode(EN_GPIO_NUM, OUTPUT);
   pinMode(STEP_GPIO_NUM, OUTPUT);
