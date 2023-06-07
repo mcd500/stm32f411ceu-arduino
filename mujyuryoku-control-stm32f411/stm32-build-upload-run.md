@@ -26,6 +26,7 @@ Change the Newlib to enable to user type float in the printf() function.
 
 Mostly there was two parts required for porting ESP32 program to STM32F411.
 
+
 ### Change the GPIO Pins.
 
 The SW_GPIO_NUM is `KEY` button on the Black Pill.
@@ -65,6 +66,52 @@ void local_printf(char *fmt, ...)
   va_end(argptr);
 }
 ```
+
+### Location to find STM32F411 definitions in the STM32duino to port programs on Black Pill STM32F4.
+
+
+The board setting at `line 3986` in `boards.txt`.
+```
+$ vi +3986 /home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/boards.txt
+```
+
+Defintion in `boards.txt`.
+```
+GenF4.menu.pnum.GENERIC_F411CEUX=Generic F411CEUx
+GenF4.menu.pnum.GENERIC_F411CEUX.upload.maximum_size=524288
+GenF4.menu.pnum.GENERIC_F411CEUX.upload.maximum_data_size=131072
+GenF4.menu.pnum.GENERIC_F411CEUX.build.board=GENERIC_F411CEUX
+GenF4.menu.pnum.GENERIC_F411CEUX.build.product_line=STM32F411xE
+GenF4.menu.pnum.GENERIC_F411CEUX.build.variant=STM32F4xx/F411C(C-E)(U-Y)
+```
+
+The definitios of Black Pill STM32F411.
+```
+/home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/variants/STM32F4xx/F411C\(C-E\)\(U-Y\)/variant_BLACKPILL_F411CE.h
+```
+
+The definitios of STM32F411.
+```
+/home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/system/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
+```
+
+The definitios of generic STM32F4xx.
+```
+/home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/system/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+```
+
+The definitios of generic ARM Cortex-M4.
+```
+/home/USER/.arduino15/packages/STMicroelectronics/tools/CMSIS/5.7.0/CMSIS/Core/Include/core_cm4.h
+```
+
+
+### Source code of Zero Gravity Test program
+
+[Original ESP32](ESP32_ZeroG_ControlPrg.ino)
+
+[Ported source code on Black Pill STM32F411](mujyuryoku-control-stm32f411.ino)
+
 
 ### Made other changes to build on STM32F411.
 
