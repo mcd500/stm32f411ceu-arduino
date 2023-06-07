@@ -75,7 +75,7 @@ The board setting at `line 3986` in `boards.txt`.
 $ vi +3986 /home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/boards.txt
 ```
 
-Defintion in `boards.txt`.
+Definition in `boards.txt`.
 ```
 GenF4.menu.pnum.GENERIC_F411CEUX=Generic F411CEUx
 GenF4.menu.pnum.GENERIC_F411CEUX.upload.maximum_size=524288
@@ -85,22 +85,22 @@ GenF4.menu.pnum.GENERIC_F411CEUX.build.product_line=STM32F411xE
 GenF4.menu.pnum.GENERIC_F411CEUX.build.variant=STM32F4xx/F411C(C-E)(U-Y)
 ```
 
-The definitios of Black Pill STM32F411.
+The definitions of Black Pill STM32F411.
 ```
 /home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/variants/STM32F4xx/F411C\(C-E\)\(U-Y\)/variant_BLACKPILL_F411CE.h
 ```
 
-The definitios of STM32F411.
+The definitions of STM32F411.
 ```
 /home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/system/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f411xe.h
 ```
 
-The definitios of generic STM32F4xx.
+The definitions of generic STM32F4xx.
 ```
 /home/USER/.arduino15/packages/STMicroelectronics/hardware/stm32/2.5.0/system/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 ```
 
-The definitios of generic ARM Cortex-M4.
+The definitions of generic ARM Cortex-M4.
 ```
 /home/USER/.arduino15/packages/STMicroelectronics/tools/CMSIS/5.7.0/CMSIS/Core/Include/core_cm4.h
 ```
