@@ -58,9 +58,9 @@ void loop() {
 
 Sometimes it requires pressing BOOT0 and RESET button before uploading the binary.
 
-1. Press both reset and BOOT0
-2. Hold boot0, release RESET
-3. Release BOOT0 2 sec later
+1. Press both `RESET` and `BOOT0`
+2. Hold boot0, release `RESET`
+3. Release `BOOT0` 2 sec later
 
 This is the screenshot when the upload is successful.
 
